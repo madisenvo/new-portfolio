@@ -1,6 +1,6 @@
 .nav-bar{
     background:#181818;
-    width: 60px;
+    width: 8%;
     height:100%;
     position: absolute;
     top: 0;
@@ -14,11 +14,11 @@
         img{
             display: block;
             margin: 8px auto;
-            width: 24px;
+            width: 50px;
             height: auto;
 
             &.sub-logo{
-                width: 50px;
+                width: 70px;
             }
         }
     }
@@ -60,7 +60,7 @@ nav{
 
         &:after {
             content: '';
-            font-size: 9px;
+            font-size: 15px;
             letter-spacing: 2px;
             position: absolute;
             bottom: 0;
@@ -73,20 +73,20 @@ nav{
 
         &:first-child {
             &::after {
-                content: 'home';
+                content: 'HOME';
             }
         }
     }
 
     a.about-link {
         &:after {
-            content: 'about';
+            content: 'ABOUT';
         }
     }
 
     a.contact-link {
         &:after {
-            content: 'contact';
+            content: 'CONTACT';
         }
     }
 
@@ -111,7 +111,7 @@ ul{
         a{
             padding: 7px 0;
             display: block;
-            font-size: 15px;
+            font-size: 20px;
             line-height: 16px;
 
             &:hover svg{

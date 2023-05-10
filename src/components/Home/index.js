@@ -1,18 +1,20 @@
-import LogoTitle from '../../assets/images/logo-m.png';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import AnimatedLetters from '../AnimatedLetters';
-import './index.scss';
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Loader from 'react-loaders'
+import AnimatedLetters from '../AnimatedLetters'
+import LogoTitle from '../../assets/images/logo-m.png'
+import Logo from './Logo'
+import './index.scss'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = ['a', 'd', 'i', 's', 'e', 'n', '.']
 
-    useEffect(() => {
-        return setTimeout(() => {
-            setLetterClass('text-animate-hover')
-        }, 1000)
-    }, [])
+    // useEffect(() => {
+    //     return setTimeout(() => {
+    //       setLetterClass('text-animate-hover')
+    //     }, 4000)
+    //   }, []);
 
     return(
         <div className="container home-page">

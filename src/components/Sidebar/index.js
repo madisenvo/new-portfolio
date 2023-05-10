@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
+import { useState } from 'react'
 import LogoM from '../../assets/images/logo-m.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,7 +13,9 @@ import {
   faUser,
   faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
-const Sidebar = () => (
+
+const Sidebar = () => {
+    return(
     <div className='nav-bar'>
         <Link className='logo' to='/'>
             <img src={LogoM} alt='logo' />
@@ -52,6 +55,7 @@ const Sidebar = () => (
             </li>
         </ul>
     </div>
-)
+    )
+}
 
 export default Sidebar;

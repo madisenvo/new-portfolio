@@ -2,7 +2,7 @@
 
     .text-zone{
         position: absolute;
-        left: 10%;
+        left: 20%;
         top: 50%;
         transform: translateY(-50%);
         width: 40%;
@@ -11,7 +11,7 @@
 
     h1{
         color: #fff;
-        font-size: 53px;
+        font-size: 70px;
         margin: 0;
         font-family: "Coolvetica";
         font-weight: 400;
@@ -20,17 +20,17 @@
         img{
             margin-left: 20px;
             opacity: 0;
-            width: 32px;
+            width: 50px;
             height: auto;
             animation: rotateIn 1s linear both;
             animation-delay: 1.4s;
         }
     }
     h2 {
-        color: #8d8d8d;
+        color: #494848;
         margin-top: 20px;
         font-weight: 400;
-        font-size: 11px;
+        font-size: 17px;
         font-family: sans-serif;
         letter-spacing: 3px;
         animation: fadeIn 1s 1.8s backwards;
@@ -38,8 +38,8 @@
     
       .flat-button {
         color: #fd7f32;
-        font-size: 13px;
-        font-weight: 400;
+        font-size: 15px;
+        font-weight: 500;
         letter-spacing: 4px;
         font-family: sans-serif;
         text-decoration: none;
@@ -52,7 +52,7 @@
     
         &:hover {
           background: #fd7f32;
-          color: #333;
+          color: #fffefe;
         }
       }
     }
