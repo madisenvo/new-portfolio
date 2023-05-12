@@ -19,13 +19,10 @@ const About = () => {
     <>
       <div className="container about-page">
         <div className="text-zone">
-            <h1>
-            <AnimatedLetters
+          <h1><AnimatedLetters
               letterClass={letterClass}
               strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
-              idx={15}
-            />
-            </h1>
+              idx={15}/></h1>
           <p>
             I'm an ambitious and motivated fullstack developer looking for a role that provides the opportunity to work with a supportive team on challenging and diverse projects.
           </p>
