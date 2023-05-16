@@ -13,7 +13,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './index.scss'
 
 const About = () => {
-  const [letterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState('text-animate')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 3000)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [])
 
   return (
     <>

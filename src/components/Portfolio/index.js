@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import Loader from "react-loaders";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
-import { getDocs, collection } from 'firebase/firestore';
-// import { db } from '../../firebase';
 
 const Portfolio = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -16,45 +14,57 @@ const Portfolio = () => {
 
         return () => {
             clearTimeout(timer);
-        }
-    });
-
-    useEffect(() => {
-        getPortfolio();
+        };
     }, []);
 
-    const getPortfolio = async () => {
-        const querySnapshot = await getDocs(collection('portfolio'));
-        setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
-    }
+    useEffect(() => {
+        // Fetch portfolio data from a different data source or store it locally
+        const fetchedPortfolio = [
+            {
+                name: "Project 1",
+                description: "Description of Project 1",
+                image: "project1.jpg",
+                url: "https://example.com/project1"
+            },
+            {
+                name: "Project 2",
+                description: "Description of Project 2",
+                image: "project2.jpg",
+                url: "https://example.com/project2"
+            },
+            // Add more portfolio items as needed
+        ];
+
+        setPortfolio(fetchedPortfolio);
+    }, []);
 
     const renderPortfolio = (portfolio) => {
         return (
             <div className="images-container">
-                {
-                    portfolio.map((port, idx) => {
-                        return (
-                            <div className="image-box" key={idx}>
-                                <img 
+                {portfolio.map((port, idx) => {
+                    return (
+                        <div className="image-box" key={idx}>
+                            <img 
                                 src={port.image}
                                 className="portfolio-image"
-                                alt="portfolio" />
-                                <div className="content">
-                                    <p className="title">{port.name}</p>
-                                    <h4 className="description">{port.description}</h4>
-                                    <button
-                                        className="btn"
-                                        onClick={() => window.open(port.url)}
-                                    >View</button>
-                                </div>
+                                alt="portfolio"
+                            />
+                            <div className="content">
+                                <p className="title">{port.name}</p>
+                                <h4 className="description">{port.description}</h4>
+                                <button
+                                    className="btn"
+                                    onClick={() => window.open(port.url)}
+                                >
+                                    View
+                                </button>
                             </div>
-                        )
-                    })
-                }
+                        </div>
+                    );
+                })}
             </div>
         );
-    }
-
+    };
 
     return (
         <>
@@ -71,6 +81,6 @@ const Portfolio = () => {
             <Loader type="ball-rotate" />
         </>
     );
-}
+};
 
 export default Portfolio;

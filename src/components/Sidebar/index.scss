@@ -1,11 +1,13 @@
 .nav-bar{
     background:#181818;
     width: 8%;
+    min-width: 75px;
     height:100%;
+    max-height: 100vh;
     position: absolute;
     top: 0;
     z-index: 3;
-    min-height: 500px;
+    min-height: 100vh;
 
     .logo{
         display: block;

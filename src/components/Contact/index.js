@@ -6,13 +6,28 @@ import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
 
 const Contact = () => {
-  const [letterClass] = useState('text-animate')
   const form = useRef()
+  const [letterClass, setLetterClass] = useState('text-animate')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 3000)
+
+    return () => {
+      clearTimeout(timer)
+    }
+  }, [])
 
   const sendEmail = (e) => {
     e.preventDefault()
     emailjs
-      .sendForm('service_96c9nyr', 'template_1nibsrq', e.target, 'EU7DwKRXEuBDZw-sE')
+      .sendForm(
+        'service_96c9nyr',
+        'template_1nibsrq',
+        e.target,
+        'EU7DwKRXEuBDZw-sE'
+      )
       .then(
         (result) => {
           alert('email sent successfully')
