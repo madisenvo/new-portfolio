@@ -1,9 +1,18 @@
+.contact-page{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
 .contact-form {
-  width: 100%;
+  width: 40%;
+  height: 100vh;
   margin-top: 20px;
-  position:absolute;
-  left: 60%;
-  top: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+
 
   ul {
     padding: 0;

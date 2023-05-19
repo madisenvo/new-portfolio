@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Loader from "react-loaders";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
+import gopherImg from "./assets/gopher.png";
+import turnipImg from "./assets/turnip.png";
 
 const Portfolio = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -18,21 +20,21 @@ const Portfolio = () => {
     }, []);
 
     useEffect(() => {
-        // Fetch portfolio data from a different data source or store it locally
         const fetchedPortfolio = [
             {
-                name: "Project 1",
-                description: "Description of Project 1",
-                image: "project1.jpg",
-                url: "https://example.com/project1"
+                image: turnipImg,
+                name: "Turnip the Zine",
+                description: "Modern zine featuring local bands, a merch store, and a comments section where users can post, as well as edit and delete their comments. Built with Apollo, Bootstrap, CSS, GraphQL, HTML, JavaScript, Node.js, React, Redux, Stripe.",
+                github: "https://github.com/madisenvo/Turnip-the-Zine",
+                deployed: "https://turnip-the-zine.herokuapp.com/"
             },
             {
-                name: "Project 2",
-                description: "Description of Project 2",
-                image: "project2.jpg",
-                url: "https://example.com/project2"
+                image: gopherImg,
+                name: "Gopher a Friend",
+                description: "Chatroom for students to discuss areas of interest. Allows post creation, editing, and deletion. Built using HTML, CSS, Express.js, Handlebars.js, Heroku, Javascript, Node.js, OnWebChat",
+                github: "https://github.com/madisenvo/Turnip-the-Zine",
+                deployed: "https://turnip-the-zine.herokuapp.com/"
             },
-            // Add more portfolio items as needed
         ];
 
         setPortfolio(fetchedPortfolio);
@@ -54,9 +56,15 @@ const Portfolio = () => {
                                 <h4 className="description">{port.description}</h4>
                                 <button
                                     className="btn"
-                                    onClick={() => window.open(port.url)}
+                                    onClick={() => window.open(port.deployed)}
                                 >
-                                    View
+                                    View Deployed Application
+                                </button>
+                                <button
+                                    className="btn"
+                                    onClick={() => window.open(port.github)}
+                                >
+                                    View Github Repository
                                 </button>
                             </div>
                         </div>
