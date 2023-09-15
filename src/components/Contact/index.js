@@ -36,15 +36,13 @@ const Contact = () => {
           alert('error sending email')
         }
       )
-    //clears the form after sending the email
     e.target.reset()
   }
 
   return (
     <>
       <div className="container contact-page">
-        <div className="text-zone">
-          <h1>
+          <h1 className="contact-title">
             <AnimatedLetters
               letterClass={letterClass}
               strArray={['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e']}
@@ -87,7 +85,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-      </div>
       <Loader type="ball-rotate" />
     </>
   )

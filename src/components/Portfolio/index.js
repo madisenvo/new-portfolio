@@ -5,6 +5,8 @@ import "./index.scss";
 import gopherImg from "./assets/gopher.png";
 import turnipImg from "./assets/turnip.png";
 import issueImg from "./assets/issue.png";
+import kioskImg from "./assets/kiosk.png";
+import regImg from "./assets/register.png";
 
 const Portfolio = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
@@ -26,7 +28,7 @@ const Portfolio = () => {
                 image: gopherImg,
                 name: "Gopher a Friend",
                 description: "Chatroom for students to discuss areas of interest. Allows post creation, editing, and deletion.",
-                tech: "HTML, CSS, Express.js, Handlebars.js, Heroku, Javascript, Node.js, OnWebChat",
+                tech: "CSS, Express.js, Handlebars.js, Heroku, HTML, Javascript, Node.js, OnWebChat",
                 github: "https://github.com/madisenvo/Gopher-a-Friend",
                 deployed: "https://gopher-a-friend.herokuapp.com/"
             },
@@ -42,7 +44,19 @@ const Portfolio = () => {
                 image: issueImg,
                 name: "Gitlab Issue Report Form",
                 description: "Allows non-IT team members to submit issues to a Gitlab project.",
-                tech: "Gitlab API, CSS, HTML, JavaScript, Node.js, Espress.js, Docker"
+                tech: "CSS, Docker, Express.js, Gitlab API, HTML, JavaScript, Node.js"
+            },
+            {
+                image: kioskImg,
+                name: "Kiosk UI",
+                description: "Cryptocurrency ATM kiosk UI for over 700 machines nation wide and additional machines for international operators.",
+                tech: "Bulma, HTML, JavaScript, Svelte, SCSS, Typescript, Vite"
+            },
+            {
+                image: regImg,
+                name: "User Registration Form",
+                description: "Online form allowing new customers to create an account before visiting a kiosk.",
+                tech: "Express.js, HTML, JavaScript, Pug, Node.js"
             }
         ];
 
