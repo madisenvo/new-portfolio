@@ -1,10 +1,15 @@
-.contact-page {
-  padding-left: 100px;
-  padding-right: 50px;
-  width: 100%;
-  position: initial;
-  height: 100%;
-  overflow: hidden;
+.contact-page{
+  flex: 0 0 60%;
+  padding-right: 20px;
+
+  .contact-content{
+      position: absolute;
+      left: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 87%;
+      max-height: 90%;
+  }
 
   h1.contact-title {
     margin-left: 100px;

@@ -42,6 +42,7 @@ const Contact = () => {
   return (
     <>
       <div className="container contact-page">
+        <div className="contact-content">
           <h1 className="contact-title">
             <AnimatedLetters
               letterClass={letterClass}
@@ -86,6 +87,7 @@ const Contact = () => {
           </div>
         </div>
       <Loader type="ball-rotate" />
+      </div>
     </>
   )
 }
