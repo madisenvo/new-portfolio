@@ -2,8 +2,8 @@
     background:#181818;
     width: 8%;
     min-width: 75px;
-    height:100%;
-    max-height: 100vh;
+    height:100% !important;
+    max-height: 100vh !important;
     position: absolute;
     top: 0;
     z-index: 3;
@@ -128,3 +128,62 @@ ul{
         }
     }
 }
+
+// Hamburger icon button
+/* Add these styles to your SCSS file */
+
+/* Hamburger icon button (hidden by default) */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 4;
+
+  svg {
+    font-size: 24px;
+  }
+  }
+  
+  @media screen and (max-width: 682px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    /* Adjust the styles for the sidebar when it's open */
+    .nav-bar.menu-open {
+      transform: translateX(0);
+    }
+  
+    .nav-bar {
+      width: 100px;
+      height: 100vh;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+  
+  
+      ul {
+        position: absolute;
+        top: 0;
+        left: -60px;
+        width: 60px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+        li {
+          a {
+            padding: 10px;
+            svg {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -98,3 +98,24 @@
     }
   }
 }
+
+@media screen and (max-width: 920px) {
+  .contact-page {
+    .contact-content{
+      width: 100%;
+      left: 2%;
+      top: 20%;
+      transform: none;
+      justify-content: center;
+      align-items: center;
+    }
+    // .contact-title {
+    //   margin-left: 150px;
+    // }
+
+    // .contact-form {
+    //   width: 80%;
+    //   margin-left: 0;
+    // }
+  }
+}
