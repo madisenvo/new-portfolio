@@ -1,10 +1,11 @@
 p{
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .text-zone{
   width: 40% !important;
   margin-left: 150px;
+  animation: fadeIn 1s 1.8s backwards;
 }
 
 .stage-cube-cont {
@@ -16,6 +17,7 @@ p{
     position: absolute;
     right: 0;
     overflow: hidden;
+    animation: fadeIn 1s 1.8s backwards;
   }
   
   .cubespinner {

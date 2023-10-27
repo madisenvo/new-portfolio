@@ -41,7 +41,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="container contact-page">
+      <div className="contact-page">
         <div className="contact-content">
           <h1 className="contact-title">
             <AnimatedLetters

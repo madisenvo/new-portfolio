@@ -15,9 +15,11 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        margin-bottom: 0;
         margin-left: -50px;
         padding-bottom: 100px;
         justify-content: center;
+        animation: fadeIn 1s 1.8s backwards;
         .image-box {
             flex: 0 0 25%; 
             max-width: 30%;

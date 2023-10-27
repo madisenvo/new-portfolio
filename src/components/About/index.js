@@ -27,7 +27,7 @@ const About = () => {
 
   return (
     <>
-      <div className="container about-page">
+      <div className="about-page">
         <div className="text-zone">
           <h1><AnimatedLetters
               letterClass={letterClass}
@@ -35,8 +35,8 @@ const About = () => {
               idx={15}/></h1>
           <p>
             I'm an ambitious and motivated fullstack developer looking for a role that provides the opportunity to work with a supportive team on challenging and diverse projects.
-          </p>
-          <p align="LEFT">
+            <br />
+            <br />
             I'm naturally curious, a passionate problem-solver and expert communicator always looking to expand my skillset.
           </p>
         </div>
